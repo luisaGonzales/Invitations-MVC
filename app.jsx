@@ -41,6 +41,11 @@ class Model {
 		this.inputValue = e.target.value;
 		this.inform();
 	}
+	remove(e){
+		let pos = e.target.id;
+		this.invitees.splice(pos, 1);
+		this.inform();
+	}
 }
 
 const Header = (props) => {
@@ -70,7 +75,7 @@ const List = (props) => {
 				<label> Confirmed 
 					<input type="checkbox"/>
 				</label>
-				<button>Remove</button>
+				<button id={index} onClick={(e) => {props.model.remove(e)}}>Remove</button>
 			</li>
 		);
 	});
