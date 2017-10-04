@@ -30,9 +30,9 @@ class Model {
 	addSomeone(someone){
 		this.invitees.push({
 			name: someone,
-			id: Utils.uuid()
+			id: Utils.uuid(),
+			check: false
 		})
-		console.log(someone);
 		console.log(this.invitees);
 		this.inputValue = "";
 		this.inform();
@@ -70,7 +70,7 @@ const Header = (props) => {
 const List = (props) => {
 	const allPeople = props.model.invitees.map((someone, index) => {
 		return (
-			<li key={someone.id}>
+			<li key={someone.id} className={someone.check == true ? 'responded' : ''}>
 				{someone.name}
 				<label> Confirmed 
 					<input type="checkbox"/>
