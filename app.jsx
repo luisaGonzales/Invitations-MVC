@@ -1,19 +1,4 @@
-{/* <div class="wrapper">
-      <header>
-        <h1>RSVP</h1>
-        <p> Registration App </p>
-        <form id="registrar">
-          <input type="text" name="name" placeholder="Invite Someone">
-          <button type="submit" name="submit" value="submit">Submit</button>
-        </form>
-      </header>
-      
-      <div class="main">	
-        <h2>Invitees</h2>
-        <ul id="invitedList"></ul>	
-      </div>
-    </div> */}
-
+'use strict';
 
 class Model {
 	constructor(){
@@ -49,7 +34,6 @@ class Model {
 	responded(e){
 		let confirm = e.target.checked;
 		let pos = e.target.name;
-		console.log(confirm);
 		if(confirm){
 			this.invitees[pos].check = true;
 		} else {
