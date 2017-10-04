@@ -13,12 +13,13 @@ class Model {
 		this.render();
 	}
 	addSomeone(someone){
-		this.invitees.push({
-			name: someone,
-			id: Utils.uuid(),
-			check: false
-		})
-		console.log(this.invitees);
+		if(someone != ""){
+			this.invitees.push({
+				name: someone,
+				id: Utils.uuid(),
+				check: false
+			});
+		}
 		this.inputValue = "";
 		this.inform();
 	}
