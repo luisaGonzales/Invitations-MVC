@@ -55,7 +55,7 @@ const Header = (props) => {
 					props.model.inform();
 				}}>
 					<input type="text" name="name" placeholder="Invite Someone" onChange={(e) => {props.model.onChange(e)}} value={props.model.inputValue}/>
-					<button type="submit" name="submit" value="submit">Submit</button>
+					<button type="submit" name="submit" value="submit">Invite</button>
 				</form>
       		</header>
 		</div>
@@ -78,7 +78,7 @@ const List = (props) => {
 		<div>
 			<div className="main">	
 				<h2>Invitees</h2>
-				<ul id="invitedList">{allPeople}</ul>	
+				<ul id="invitedList" className="capitalize">{allPeople}</ul>	
       		</div>
 		</div>
 	);

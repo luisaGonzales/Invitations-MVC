@@ -9,6 +9,7 @@ body {
   font-family: 'Lato', sans-serif;
   color: #4c4c4c;
   background: #f8fdf3;
+  background-image: url(images/fondo.jpeg);
 }
 h1,
 p,
@@ -43,9 +44,17 @@ form {
 form button {
   padding: 0 1em;
   font-size: 1em;
-  background: #7bcbc4;
+  background: rgb(205, 88, 162);
   border-radius: .2em;
+  font-weight: bold;
 }
+
+form button:hover {
+  background: rgba(205, 88, 162, 0.68);
+  transition: 0.4s;
+}
+
+
 ul {
   list-style: none;
   padding: 0;
@@ -55,8 +64,8 @@ ul li {
   padding: 1em;
   background: #fff;
   border-radius: .2em;
-  border: solid 1px rgba(88, 183, 205, .2);
-  border-bottom: solid 2px rgba(88, 183, 205, .2);
+  border: solid 1px rgba(205, 88, 152, 0.2);
+  border-bottom: solid 2px rgba(205, 88, 176, 0.2);
   position: relative;
 }
 button {
@@ -69,8 +78,8 @@ button {
 }
 header {
   text-align: center;
-  background: linear-gradient(90deg, #d4eece, #55b3d0, #1e7eb7),
-              url('images/header-bg.jpg') no-repeat;
+  background: linear-gradient(90deg, #d4eece, rgba(208, 85, 165, 0.65), rgba(111, 62, 89, 0.66)),
+              url('images/header.jpeg') no-repeat;
               background-blend-mode: multiply;    
               background-size: cover;   
 }
@@ -106,10 +115,10 @@ li button {
   border-radius: .3em;
   padding: .4em .6em;
   color: white;
-  background: #58b7cd;
+  background: #CD588F;
 }
 li button:last-child {
-  background: rgba(88, 183, 205, .5);
+  background: rgba(205, 88, 162, 0.5);
 }
 .wrapper {
   width: 100%;
@@ -131,13 +140,15 @@ div > label {
 /* responded */
 .responded {
   transition: 0.4s;
-  border-color: rgba(88, 183, 205, .9);
+  border-color: rgba(201, 112, 155, 0.9);
 }
 .responded label {
   transition: 0.4s;
   color: rgba(88, 183, 205, 1);
 }
-
+.capitalize{
+  text-transform: capitalize;
+}
 /* ================================= 
   Media Queries
 ==================================== */
