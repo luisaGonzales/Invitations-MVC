@@ -46,6 +46,17 @@ class Model {
 		this.invitees.splice(pos, 1);
 		this.inform();
 	}
+	responded(e){
+		let confirm = e.target.checked;
+		let pos = e.target.name;
+		console.log(confirm);
+		if(confirm){
+			this.invitees[pos].check = true;
+		} else {
+			this.invitees[pos].check = false;
+		}
+		this.inform();
+	}
 }
 
 const Header = (props) => {
@@ -73,7 +84,7 @@ const List = (props) => {
 			<li key={someone.id} className={someone.check == true ? 'responded' : ''}>
 				{someone.name}
 				<label> Confirmed 
-					<input type="checkbox"/>
+					<input type="checkbox" name={index} onChange={(e) => {props.model.responded(e)}}/>
 				</label>
 				<button id={index} onClick={(e) => {props.model.remove(e)}}>Remove</button>
 			</li>
